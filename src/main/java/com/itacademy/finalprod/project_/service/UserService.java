@@ -17,10 +17,4 @@ public class UserService {
         this.passwordEncoder = passwordEncoder;
     }
 
-    // Регистрация нового пользователя
-    public User registerUser(String username, String password) {
-        String encodedPassword = passwordEncoder.encode(password);  // Хешируем пароль
-       User user = new User(username, encodedPassword);   // Создаем пользователя
-        return userRepository.save(user);  // Сохраняем в базе данных
-    }
 }

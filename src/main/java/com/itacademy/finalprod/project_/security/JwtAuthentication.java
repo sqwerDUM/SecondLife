@@ -11,7 +11,7 @@ import java.util.Collections;
 
         private final String username;
 
-        // Конструктор для аутентификации с именем пользователя
+
         public JwtAuthentication(String username) {
             super(Collections.emptyList());  // Передаем пустой список ролей
             this.username = username;
@@ -28,8 +28,4 @@ import java.util.Collections;
             return username;  // Возвращаем имя пользователя
         }
 
-//        @Override
-//        public Collection<? extends GrantedAuthority> getAuthorities() {
-//            return Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER"));  // Пример роли
-//        }
 }
